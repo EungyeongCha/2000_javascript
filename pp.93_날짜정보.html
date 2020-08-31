@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>날짜정보객체</title>
+    <script>
+        /*1. 객체생성*/
+        var today = new Date();
+        var thisMonth = today.getMonth() + 1; //월 0~11
+        var thisDate = today.getDate(); //날짜
+        var thisDay = today.getDay(); //일요일(0) ~ 토요일(6)
+        var thisHour = today.getHours(); //시간
+        var thisMin = today.getMinutes(); //분
+        var thisSec = today.getSeconds(); //초
+        var thisMillSec = today.getMilliseconds(); //밀리세컨
+        // 1970년 1월 1일부터 밀리세컨으로 경과된 시간
+        var thisTime = today.getTime();
+        
+        document.write("<h1>오늘의 날짜정보</h1>");
+        document.write("오늘의 해당 월은 " +thisMonth+ "월 입니다. <br>");
+        document.write("오늘의 해당 날짜는 " +thisDate+ "일 입니다. <br>");
+        switch(thisDay) {
+            case 0:
+                thisDay = "일요일";
+                break;
+            case 1:
+                thisDay = "월요일";
+                break;
+            case 2:
+                thisDay = "화요일";
+                break;
+            case 3:
+                thisDay = "수요일";
+                break;
+            case 4:
+                thisDay = "목요일";
+                break;
+            case 5:
+                thisDay = "금요일";
+                break;
+            case 6:
+                thisDay = "토요일";
+                break;
+        }
+        document.write("오늘의 해당 요일은 " +thisDay+ "입니다. <br>");
+        document.write("현재 시간은 " +thisHour+ "시 입니다. <br>");
+        document.write("현재 분은 " +thisMin+ "분 입니다. <br>");
+        document.write("현재 초는 " +thisSec+ "초 입니다. <br>");
+        document.write("현재 밀리세컨은 " +thisMillSec+ "입니다. <br>"); 
+        document.write("경과시간은 " +thisTime+ "밀리세컨입니다. <br>"); 
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/js_coffee.css">
+    <style>
+        #detail {
+            display: none;
+        }
+    </style>
+    <title>DOM실습</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="heading">에디오피아 게뎁</h1>
+        <div id="prod_pic">
+            <img src="images/coffee1.jpg" alt="커피이미지" id="cup" width="200" height="200">
+            <div id="small-pic">
+                <img src="images/coffee1.jpg" alt="작은이미지" class="small">
+                <img src="images/coffee2.jpg" alt="작은이미지" class="small">
+                <img src="images/coffee3.jpg" alt="작은이미지" class="small">
+            </div>
+        </div>
+        <!--상세설명 시작-->
+        <div id="desc">
+            <ul>
+                <li>상품명 : 에디오피아 게뎁</li>
+                <li class="bluetext">판매가 : 9,000원</li>
+                <li>배송비 : 3,000원</li>
+                <li>적립금 : 180원(2%)</li>
+                <li>로스팅 : 2020.07.30</li>
+                <button>장바구니 담기</button>
+            </ul>
+            <a href="#" id="view">상세 설명 보기</a>
+        </div>
+        <!--상세설명 끝-->
+        
+        <!--상품상세정보 시작-->
+        <div id="detail">
+            <hr>
+            <h2>상품 상세 정보</h2>
+            <ul>
+                <li>원산지 : 에디오피아</li>
+                <li>지 역 : 이라가체프 코체레</li>
+                <li>농 장 : 게뎁</li>
+                <li>고 도 : 1,950</li>
+                <li>품 종 : 지역 토착종</li>
+                <li>가공법 : 워시드</li>
+            </ul>
+            <h3>Information</h3>
+            <p>
+                아내가 테라로사 커피숍에 갔다가 원두가 마음에 들어서 구입했던 예가체페 게뎁 원두. 커피에 대한 특별한 취향이 없던 아내가 '산미'가 있다고 확실하게 커피 취향이 생긴 이후로 되도록이면 너무 고소하거나 무난한 커피보단 플로럴한 향이 있거나 산뜻한 느낌이 나는 원두를 많이 구입한다. 그 중에서도 테라로사 예가체페 게뎁 원두는 가장 강렬한 쪽에 속하는 것 같다.
+            </p>
+            <h3>Flavor Note</h3>
+            <p>
+                은은하고 다채로운 꽃향, 망고, 다크체리, 달달함이 입안 가득
+            </p>
+        </div>
+        <!--상품상세정보 끝-->
+        
+    </div>
+</body>
+</html>
+<script>
+    //querySelector()=CSS 사용하는 요소를 DOM으로 가져올 수 있음
+    //만약, 같은 class명일 경우 첫번째 DOM만 선택
+    //querySelectorAll()=DOM 요소의 같은 값으로 정의된 것을 가져올 수 있음
+    
+    
+    //큰 이미지
+    var bigPic = document.querySelector("#cup"); 
+    //작은 이미지
+    var smallPic = document.querySelectorAll(".small");
+    //배열에 저장된 작은 이미지 함수에 연결
+    for(var i = 0; i < smallPic.length; i++) {
+        smallPic[i].addEventListener("click", changePic);
+    }
+    
+    //이벤트 리스너 작성
+    function changePic() {
+        var newPic = this.src;
+        bigPic.setAttribute("src", newPic);
+    }
+    
+    
+    //초기값=닫힘
+    var isOpen = false;
+    
+    /*클릭시 상세정보 토글*/
+    var view = document.querySelector("#view");
+    view.addEventListener("click", function(){
+       if(isOpen==false){
+          document.querySelector("#detail").style.display = "block";
+          view.innerHTML = "상세 설명 닫기";
+          isOpen = true;
+        }else{
+          document.querySelector("#detail").style.display = "none";
+          view.innerHTML = "상세 설명 보기";
+          isOpen = false;
+        } 
+    });
+
+    
+</script>

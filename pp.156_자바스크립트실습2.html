@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>이벤트실습</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            padding-top: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // DOM객체 할당
+            var pic = document.querySelector("#pic");
+            
+            //이벤트 리스너 호출
+            pic.addEventListener("mouseover", changePic);
+            pic.addEventListener("mouseout", originPic);
+            
+            //이벤트 리스너(핸들러)
+            function changePic() {
+                pic.src = "images/boy.png";
+            }
+            
+            function originPic() {
+                pic.src = "images/girl.png";
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="container">
+        <img src="images/girl.png" alt="소녀이미지" id="pic">
+    </div>
+</body>
+</html>

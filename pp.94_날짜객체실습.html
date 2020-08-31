@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>남은날짜구하기</title>
+    <script>
+//        /*1. 날짜 객체 생성*/
+//        var now = new Date();
+//        /*2. 해당연도 구하기*/
+//        var nowYear = now.getFullYear();
+//        /*3. 디데이 설정*/
+//        var dDay = new Date(nowYear, 11, 24);
+//        /*4. 디데이 설정날짜 - 현재날짜*/
+//        var theDay = dDay.getTime() - now.getTime();
+//        /*5. 남은일로 단위맞추기*/
+//        var result = theDay / 86400000;
+//        result = Math.ceil(theDay / 86400000);
+////        alert(result);
+//        document.write("오늘부터 크리스마스까지 남은 날짜 <br> D-Day : " +result+ "일 남았습니다.");
+        
+        var now = new Date();
+//        var nowYear = now.getFullYear();
+        var dDay = new Date(2020, 11, 3);
+        var theDay = dDay.getTime() - now.getTime();
+        var result = Math.ceil(theDay / 86400000);
+        document.write("<h1>D-day까지 남은 날짜</h1>");
+        document.write("D-day: " +result+ "일 남았습니다.");
+    </script>
+</head>
+<body>
+<!--    1초 = 1000밀리세컨
+    1분(60초) = 60 * 1000 = 600000밀리세컨
+    1시간(60분) = 60000 * 60 = 3600000밀리세컨
+    1일(24시간) = 3600000 * 24 = 86400000밀리세컨-->
+</body>
+</html>

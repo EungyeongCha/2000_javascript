@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>return문</title>
+    <script>
+        var num = 0;
+        // return문
+        function plusTen(num) {
+            return num + 10;
+        }
+        // alert(plusTen(10));
+        var int2 = 10;
+        var sum = 0;
+        var mul = 0;
+        function cal(int1) {
+            sum = int1 + int2;
+            mul = int1 * int2;
+//            return sum; //여기까지 mul 실행 안되는 이유
+            return mul;
+        }
+        document.write(cal(10));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

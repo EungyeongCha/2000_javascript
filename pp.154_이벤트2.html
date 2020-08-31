@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM LEVEL0 이벤트 문제점</title>
+    <script>
+        // DOM LEVEL0 이벤트 문제점
+        // : 객체하나에 이벤트는 하나만 연결 -> 같은 객체에 이벤트를 두번 이상 적용할 수 없음
+        function aa() {
+            alert('javaScript');
+        }
+        
+        window.onload = function() {
+            var btn1 = document.getElementById("btn1");
+            btn1.onclick = aa;
+        }
+        
+        window.onload = function() {
+            var btn2 = document.getElementById("btn2");
+            btn2.onclick = aa;
+        }
+    </script>
+</head>
+<body>
+    <button id="btn1">DOM LEVEL0</button>
+    <button id="btn2">DOM LEVEL00</button>
+</body>
+</html>

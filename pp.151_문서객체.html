@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문서객체(DOM)</title>
+</head>
+<body>
+  <script>
+    // A. 요소노드와 텍스트노드 모두 추가할 경우
+    // 1. 요소 노드 생성
+      var heading = document.createElement("h1");
+    // 2. 텍스트 노드 생성
+      var text = document.createTextNode("텍스트 노드를 생성");
+    // 3. 요소 노드와 텍스트 노드를 body에 연결
+      heading.appendChild(text);
+      document.body.appendChild(heading);
+      
+    // B. 요소 노드만 있는 경우
+      var img = document.createElement("img");
+      img.src = 'mathimages/img1.jpg';
+      img.alt = '이미지1';
+      img.width = 200;
+      img.height = 200;
+      document.body.appendChild(img);
+      
+    // 함수로 이미지 바꾸기
+      function changeImg() {
+          img.setAttribute("src", "mathimages/img3.jpg");
+          img.setAttribute("alt", "이미지3");
+          img.setAttribute("width", 300);
+          img.setAttribute("height", 300);
+      }
+      function restoreImg() {
+          img.setAttribute("src", "mathimages/img1.jpg");
+          img.setAttribute("alt", "이미지1");
+          img.setAttribute("width", 200);
+          img.setAttribute("height", 200);  
+      }
+      
+  </script>
+  <input type="button" value="이미지바꾸기" onclick="changeImg();">
+  <input type="button" value="이미지되돌리기" onclick="restoreImg();">
+</body>
+</html>

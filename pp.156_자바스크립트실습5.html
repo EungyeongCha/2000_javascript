@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>폼 이벤트 회원가입 유효성체크</title>
+    <style>
+        li {
+            list-style: none;
+        }
+        
+        #container {
+            width: 600px;
+            margin: 0 auto;
+        }
+        
+        .field {
+            width: 100px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 56px;
+            text-align: right;
+            margin-right: 16px;
+        }
+        
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 360px;
+            height: 36px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        
+        #buttons li{
+            display: inline-block;
+        }
+        
+        button {
+            width: 250px;
+            height: 50px;
+            border: 1px solid #ccc;
+            background: #eee;
+            font-size: 16px;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>회원가입</h1>
+        <form id="register">
+            <ul>
+                <li>
+                    <label for="user_id" class="field">아이디</label>
+                    <input type="text" id="user_id" placeholder="4~15자리의 영문 숫자 입력" required>
+                </li>
+                <li>
+                    <label for="user_email" class="field">이메일</label>
+                    <input type="email" id="user_email" required>
+                </li>
+                <li>
+                    <label for="user_pw1" class="field">비밀번호</label>
+                    <input type="password" id="user_pw1" placeholder="8자리이상" required>
+                </li>
+                <li>
+                    <label for="user_pw2" class="field">비밀번호</label>
+                    <input type="password" id="user_pw2" required>
+                </li>
+                <li>
+                    <label class="field">메일수신</label>
+                    <label class="r"><input type="radio" name="mailing" value="yes">예</label>
+                    <label class="r"><input type="radio" name="mailing" value="no">아니오</label>
+                </li>
+            </ul>
+            <ul id="buttons">
+                <li>
+                    <button class="btn">가입하기</button>
+                </li>
+                <li>
+                    <button class="btn">취소</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    //DOM 객체 할당
+    var userId = document.querySelector("#user_id");
+    var pw1 = document.querySelector("#user_pw1");
+    var pw2 = document.querySelector("#user_pw2");
+    
+    //onchange = 이벤트에서 사용자가 지정한 함수를 호출하여 각각의 동작(스크립트함수)를 실행
+    
+    userId.onchange = checkId;
+    pw1.onchange = checkPw;
+    pw2.onchange = comparePw;
+    
+//    var btn = document.querySelector("#buttons");
+//    btn.addEventListener("click", checkId);
+//    btn.addEventListener("click", checkPw);
+//    btn.addEventListener("click", comparePw);
+    
+    
+    //함수만들기
+    function checkId() {
+        if(userId.value.length < 4 || userId.value.length >= 15) {
+            alert("4~15자리 영문자나 숫자를 입력하세요");
+            userId.select();
+        }
+    }
+    
+    function checkPw() {
+        if (pw1.value.length < 8) {
+            alert("비밀번호는 8자 이상이어야 합니다.");
+            pw1.focus();
+        }
+    }
+    
+    function comparePw() {
+        if (pw1.value != pw2.value) {
+            alert("비밀번호가 다릅니다. 다시 입력하세요.");
+            pw2.value = "";
+            pw2.focus();
+        }
+    }
+</script>

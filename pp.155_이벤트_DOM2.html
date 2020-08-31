@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 DOM2</title>
+    <script>
+        window.onload = function() {
+            var button = document.getElementById("button");
+            var heading = document.getElementById("heading");
+        
+            function whenClick1() {
+                heading.style.color = "blue";
+            }
+
+            function whenClick2() {
+                heading.innerHTML = "새로 바뀌는 글자";
+            }
+            
+            //이벤트에 이벤트 리스너를 연결-DOM2방식
+            button.addEventListener("click", whenClick1);
+            button.addEventListener("click", whenClick2);
+            
+            //이벤트 리스너 제거
+            button.removeEventListener("click", whenClick1);
+        }
+    </script>
+</head>
+<body>
+    <button id="button">DOM2이벤트</button>
+    <h3 id="heading">자바스크립트 이벤트 방식</h3>
+</body>
+</html>

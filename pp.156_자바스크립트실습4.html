@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>폼연동자바스크립트</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        form {
+            width: 520px;
+            height: auto;
+            padding-left: 10px;
+            margin: 50px auto;
+        }
+        
+        fieldset {
+            border: 1px solid #c0c0c0;
+            padding: 30px 20px 30px 30px;
+            margin-bottom: 36px;
+        }
+        
+        .field {
+            width: 60px;
+            font-size: 0.9rem;
+            line-height: 55px;
+            font-weight: bold;
+            text-align: right;
+            margin-right: 16px;
+        }
+        
+        .input_box {
+            width: 360px;
+            height: 36px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form name="order">
+            <fieldset>
+                <legend>주문정보</legend>
+                <ul>
+                    <li>
+                        <label for="billingsName" class="field">이름 :</label>
+                        <input type="text" class="input_box" id="billingsName">
+                    </li>
+                    <li>
+                        <label for="billingTel" class="field">연락처 :</label>
+                        <input type="text" class="input_box" id="billingTel">
+                    </li>
+                    <li>
+                        <label for="billingAddr" class="field">주소 :</label>
+                        <input type="text" class="input_box" id="billingAddr">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        
+        <form name="ship">
+            <fieldset>
+                <legend>배송정보</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="check" id="shippingInfo">
+                        <label for="shippingInfo">주문 정보와 배송 정보가 같습니다.</label>
+                    </li>
+                    <li>
+                        <label for="shippingName" class="field">이름 :</label>
+                        <input type="text" class="input_box" id="shippingName">
+                    </li>
+                   <li>
+                        <label for="shippingTel" class="field">연락처 :</label>
+                        <input type="text" class="input_box" id="shippingTel">
+                    </li>
+                   <li>
+                        <label for="shippingAddr" class="field">주소 :</label>
+                        <input type="text" class="input_box" id="shippingAddr">
+                    </li>
+                </ul>
+            </fieldset>
+            <button type="submit" class="order">결제하기</button>
+        </form>
+    </div>
+    <script>
+        //체크박스 변수에 할당
+        var check = document.querySelector("#shippingInfo");
+        
+        //체크박스 상태에 따라 이벤트리스너 실행
+        check.addEventListener("click", function(){
+            if(check.checked==true){
+               document.querySelector("#shippingName").value = document.querySelector("#billingsName").value;
+                
+               document.querySelector("#shippingTel").value = document.querySelector("#billingTel").value;
+                
+               document.querySelector("#shippingAddr").value = document.querySelector("#billingAddr").value;
+            }else{
+               document.querySelector("#shippingName").value = "";   
+               document.querySelector("#shippingTel").value = "";
+               document.querySelector("#shippingAddr").value = "";
+            }
+        });
+        
+
+        
+    </script>
+</body>
+</html>

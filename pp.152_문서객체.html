@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문서객체</title>
+    <script>
+        window.onload = function() {
+            var js = document.getElementById("javaScript");
+            var jq = document.getElementById("jQuery");
+            //1. 자바스크립트 -> JAVASCRIPT로 바꿔서 출력
+            js.innerHTML = "JAVASCRIPT";
+            //2. jQuery 글자색을 red로 출력
+            jq.style.color= "red";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="javaScript">자바스크립트</h1>
+    <h2 id="jQuery">jQuery</h2>
+</body>
+</html>

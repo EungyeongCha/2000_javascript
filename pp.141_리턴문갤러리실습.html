@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>갤러리</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #galleryZone {
+            text-align: center;
+        }
+    </style>
+    <script>
+        var num = 1;
+        function gallery(imgNum) {
+            if(imgNum) {
+               if(num == 7){return;}
+                num++;
+            }else{
+               if(num == 1) {return;}
+                num--;
+            }
+        // 적용시킬 DOM 구조에서 해당태그 선택
+        var imgTag = document.getElementById("photo");
+        imgTag.setAttribute("src","mathimages/img" +num+ ".jpg");
+        }
+    </script>
+</head>
+<body>
+    <div id="galleryZone">
+        <p>
+            <img src="mathimages/img1.jpg" alt="ahouse" width="300" height="300" id="photo">
+        </p>
+        <p>
+            <button onclick="gallery(0);">이전</button>
+            <button onclick="gallery(1);">다음</button>
+        </p>
+    </div>
+</body>
+</html>

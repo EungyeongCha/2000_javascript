@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연산자종합실습</title>
+    <script>
+        var userName = prompt("당신의 이름은 무엇입니까?");
+        var userHeight = prompt("당신의 키는 몇 cm입니까?");
+        var userWeight = prompt("당신의 몸무게는 몇 kg입니까?");
+        
+        var result = (userHeight-100)*0.9;
+        var result2 = userWeight>=result;
+
+        var printResult = result2?userName+"님 건강을 위해 체중관리 요망":userName+"님 건강관리 잘 하셨네요";
+        document.write(printResult);
+        document.write(userName+"님의 적정 몸무게는"+result+"kg입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

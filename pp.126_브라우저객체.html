@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>브라우저객체</title>
+    <script>
+        //1. location()객체
+        var infoBrowser = "현재주소는" +location.href+ "입니다. <br>";
+        document.write(infoBrowser);
+        infoBrowser = "현재사용 하는 프로토콜은 : " + location.protocol + "입니다. <br>";
+        document.write(infoBrowser);
+        infoBrowser = "현재사용하는 포트번호는" +infoBrowser.host+ "입니다.";
+        document.write(infoBrowser);
+        
+        //2. navigator() 객체
+        var infoBrowser2 = "";
+        infoBrowser2 = "브라우저 코드명 :" + navigator.appCodeName + "<br><br>";
+        document.write(infoBrowser2);
+        infoBrowser2 += "브라우저 이름: " + navigator.appName + "<br><br>";
+        document.write(infoBrowser2);
+        infoBrowser2 +="브라우저 버전 :" + navigator.appVersion + + "<br><br>";
+        infoBrowser2 += "브라우저 사용언어 : " +navigator.language+
+        infoBrowser2 += "브라우저 엔진이름 : " +navigator.product+
+        infoBrowser2 += "운영체제 환경 : " +navigator.platform+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

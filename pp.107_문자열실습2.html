@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문자열실습</title>
+    <script>
+        var userName = prompt("영문이름을 입력해주세요");
+        userName = userName.toUpperCase();
+        document.write("입력받은 이름은 " + userName + " 입니다.");
+        
+        var userPhone = prompt("전화번호를 입력해 주세요");
+        
+        var lastFour = userPhone.substr(userPhone.length-4, 4);
+        var result = userPhone.replace(lastFour, "xxxx");
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval()</title>
+    <script>
+        var addNum = 0;
+        var subNum = 1000;
+        /*1. 함수 만드는 법(익명함수)*/
+        /*function() {실행문;}*/
+        var plusNum = setInterval(function() {
+            addNum++;
+            console.log("addNum :" + addNum);
+        }, 3000);
+        
+        var minusNum = setInterval(function() {
+           subNum--;
+            console.log("subNum : " + subNum);
+        }, 2000);
+    </script>
+</head>
+<body>
+   <h1>setInterval()메서드</h1>
+   <button onclick="clearInterval(plusNum);">setInterval_STOP</button>
+   <button onclick="clearInterval(minusNum);">STOP</button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문자열 메서드 / 속성</title>
+    <script>
+        var str = "Hello Thank you good luck to you";
+        // 문자열에서 인덱스 번호에 해당하는 문자를 반환
+        document.write(str.charAt(10), "<br>"); //k
+        // 문자열에서 왼쪽부터 찾을 문자와 제일 먼저 일치하는 문자의 인덱스 번호를 반환
+        document.write(str.indexOf("you"), "<br>"); //12
+        // 문자열에서 오른쪽부터 찾을 문자와 제일 번저 일치하는 문자의 인덱스 번호를 반환
+        document.write(str.lastIndexOf("you"), "<br>"); //29
+        // 문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아, 제일 먼저 찾은 문자를 반환. 찾는 문자가 없으면 -1반환
+        document.write(str.match("luck"), "<br>");
+        
+        // 문자열 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아 제일 먼저 찾는 문자를 새문자로 치환(암기)
+        document.write(str.replace("you", "me"), "<br>"); //you->me
+        // 문자열 왼쪽부터 찾을 문자와 제일 먼저 알치하는 문자의 인덱스 번호를 반환
+        document.write(str.search("you"), "<br>");//12
+        // 문자열에서 문자를 자른 후 남는 문자를 반환
+        document.write(str.slice(3, 7), "<br>");//lo T
+        
+        // 문자열에서 지정한 문자 갯수만큼 문자열 반환(암기)=인덱스번호 21부터 4개를 반환
+        document.write(str.substr(21, 4), "<br>");//luck
+        
+        // 문자열에서 영문 문자를 모두 소문자로 치환
+        document.write(str.toLowerCase(), "<br>");
+        // 문자열에서 영문 소문자를 모두 대문자로 치환
+        document.write(str.toUpperCase(), "<br>");
+        
+        // 문자열 갯수반환 (암기)
+        document.write(str.length, "<br>"); //32
+        
+        // 문자의 앞 또는 뒤에 공백 문자열 삭제(암기)
+        document.write(str.trim());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

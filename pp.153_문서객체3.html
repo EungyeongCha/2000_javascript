@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문서객체사용</title>
+    <script>
+        window.onload = function() {
+            //1. getElementsByName(): 문자열과 일치하는 name속성을 가져옴
+            /*var btn = document.getElementsByName("check");
+            document.write("가져온 문서객체의 수 : " + btn.length);*/
+            
+            //2. getElementByTagName(): 태그네임과 일치하는 문서객체를 가져옴
+            var tag = document.getElementsByTagName("h3");
+            for(var i = 0; i < tag.length; i++) {
+                tag[i].innerHTML = (i+1) + "번째 h3문자열";
+                tag[i].style.backgroundColor = "silver";
+            }
+                tag[1].style.backgroundColor = "red";
+                tag[2].style.backgroundColor = "green";
+                tag[3].style.backgroundColor = "purple";
+            
+            //3. 스타일 사용
+            var ad = document.getElementById("heading4");
+            ad.style.color = "red";
+            ad.style.border = "3px blue dotted";
+            document.body.style.background = "green";
+            
+            //4. 문서객체 제거 : 부모 노드로 가서 자식 노드 제거가 원칙
+            var heading1 = document.getElementById("heading1");
+            heading1.parentNode.removeChild(heading1);
+            
+            //4-1. 속성 제거
+            var att = document.getElementsByTagName("a");
+            for(var j = 0; j < att.length; j++) {
+                att[j].removeAttribute("href");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="버튼1" name="check">
+    <input type="button" value="버튼2" name="check">
+    <h3 id="heading1">자바스크립트</h3>
+    <h3 id="heading2">제이쿼리</h3>
+    <h3 id="heading3">씨에스에스</h3>
+    <h3 id="heading4">HTML5</h3>
+    <a href="http://www.daum.net">다음으로 이동</a>
+    <a href="http://www.naver.com">네이버로 이동</a>
+</body>
+</html>

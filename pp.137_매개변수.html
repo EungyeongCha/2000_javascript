@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>매개변수</title>
+    <script>
+        // 매개변수가 있는 선언적 함수(호출시 값을 넘겨줌)
+        function ezFn(name, area) {
+            document.write("안녕하세요 " + name + "입니다.<br>");
+            document.write("사는 곳은 " + area + "입니다.<br>");
+        }
+        // ezFn("차은경", "경기도");
+        
+        function hi(msg) {
+            alert(msg);
+        }
+        
+//        function btn1() {
+//            hi("안녕하세요");
+//        }
+//        
+//        function btn2() {
+//            hi("반갑습니다");
+//        }
+    </script>
+</head>
+<body>
+    <button onclick="hi('안녕하세요');">버튼1</button>
+    <button onclick ="hi('반갑습니다');">버튼2</button>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변수</title>
+    <script>
+        /*1. 변수선언*/
+        var box;
+        /*1-1. 변수에 값 할당(문자형)*/
+        box = "100";
+        /*1-2. 변수에 값 할당(숫자형)*/
+        box = 100;
+        
+        var num1, num2;
+        num1 = 10;
+        num2 = 20;
+        /*두 수의 합을 result에 할당*/
+        var result = num1+num2;
+        
+        /*변수명 number1, number2에 숫자형데이터 50,80을 할당*/
+        var number1 = 50;
+        var number2 = 80;
+        
+        /*2. <body>영역에 출력*/
+        document.write(result);
+        document.write("<h1>자바스크립트</h1>");
+        
+        /*문자열 결합 + */
+        document.write("이 계산의 결과값은 : " + result + " 입니다. <br>");
+        
+        var newNum1 = 120;
+        var newNum2 = 180;
+        var newResult = newNum1+newNum2;
+        document.write("두 데이터의 합은 " + newResult + " 입니다. <br>");
+        
+        /*논리형데이터*/
+        var bool = true; //1과같음
+        var bool2 = false; //0과같음
+        var result3 = bool2==1;
+        document.write("논리형데이터 값 : " + result3 + "<br>");
+        
+        /*데이터형 변환 문자형-->숫자형*/
+        var com1 = 10;
+        var com2 = 20;
+        var com3 = "30";
+        var com4 = "40";
+        var com5 = true;
+        var com6 = false;
+        
+        com3 = Number(com3);
+        com4 = Number(com4);
+        
+        var result4 = com3+com4;
+        document.write(result4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

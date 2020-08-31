@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>else if문 중첩if문</title>
+    <script>
+/*        var grade = prompt("점수를 입력",0);
+        grade = Number(grade);
+        if(grade>=90){
+            alert('A학점');
+        }else if(grade>=80){
+            alert('B학점');
+        }else if(grade>=70){
+            alert('C학점');
+        }else if(grade>=60){
+            alert('D학점')
+        }else{
+           alert('재수강');
+        }
+        */
+//        location객체 : 브라우저 관련 속성과 메서드를 제공
+//        location.reload();
+/*        var month = prompt("무슨 달인가요?",7);
+        
+        if(9<=month && month<=11){
+            document.write("가을입니다.");
+        }else if(6<=month && month<=8){
+            document.write("여름입니다.");
+        }else if(3<=month && month<=5){
+            document.write("봄입니다.");
+        }else{
+            document.write("겨울입니다.");
+        }*/
+        
+//        중첩 if문
+        var dbId = "ezen";
+        var dbPw = "1234";
+        
+        var id = prompt("ID를 입력해 주세요", "ezen");
+        
+/*        if (id == dbId){
+            document.write(id+"님 로그인 하셨습니다.");
+        }else{
+            alert("회원가입 안됨");
+        }*/
+        
+        if(id==dbId){
+            var pw = prompt("패스워드를 입력해주세요","1234");
+            if(pw==dbPw){
+               alert("로그인성공!!");
+            }else{
+               alert("로그인실패!!");
+            }
+        }else{
+            alert("ID가 맞지 않음");
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

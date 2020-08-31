@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문자열실습</title>
+    <script>
+        var password = prompt("비밀번호를 입력해 주세요");
+        var passLength = password.length;
+        if (passLength < 8) {
+            alert("8자 이상으로 다시 입력하시오")
+        } else {
+            document.write("비밀번호 " + passLength + "자가 입력되었습니다.");
+        }
+        
+        var name = prompt("이름을 입력해 주세요");
+        document.write("입력하신 이름은" + name.toUpperCase() +"입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

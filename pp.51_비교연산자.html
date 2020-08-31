@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>비교연산자</title>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var d = "20";
+        var result = null;
+        
+        result = a > b; //false
+        result = a < b; //true
+        result = a >= c; //true
+        /*데이터형과 상관없이 숫자일경우 true반환*/
+        result = b == d; //true
+        /*데이터형 일치해야 true반환*/
+        result = b === d; //false
+        result = b != d; //false
+        result = b !== d; //true
+        alert(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

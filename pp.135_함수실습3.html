@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본함수사용법</title>
+</head>
+<body>
+    <div id="bgCh">
+        <button onclick="bgcch();">CLICK</button>
+    </div>
+</body>
+</html>
+    <script>
+        var ex1 = function() {
+            alert("자바스크립트 수업");
+        };
+//        ex1();
+        
+        
+        function def() {
+            document.write("자바스크립트 개념정리");
+        }
+//        def();
+        
+        var cl = ["black", "blue", "red", "green"];
+        var btn = document.getElementById("bgCh");
+        var i = 0;
+        function bgcch() {
+            i++;
+            if (cl.length >= 0) {
+                btn.style.backgroundColor = cl[i];
+            }
+        }
+        
+    </script>

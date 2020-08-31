@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>switch~case문</title>
+    <script>
+//        1. 입력받은 수가 홀수인지 짝수인지 판별
+/*        var num = prompt("좋아하는 수 입력",0);
+        num = Number(num);
+        switch(num%2){
+            case 0:
+                alert("짝수입니다.");
+                break;
+            case 1:
+                alert("홀수입니다.");
+                break;
+            default:
+                alert("숫자가 아닙니다.");
+        }*/
+        
+//        2. 포털사이트 접속하기
+/*        var site = prompt("구글, 네이버, 다음 중 하나 입력", "구글");
+        var url;
+        switch(site){
+            case "구글":
+                url = "http://google.co.kr";
+                break;
+            case "네이버":
+                url = "http://www.naver.com";
+                break;
+            case "다음":
+                url = "http://www.daum.net";
+                break;
+            default:
+                alert("다시입력해주세요");
+                location.reload();
+        }
+        
+        if(url){
+           location.href = url;
+        }*/
+        
+        var region = prompt("지역명을 입력해 주세요");
+        var regionNum;
+        switch(region){
+            case "서울":
+                regionNum = "02";
+                break;
+            case "경기도":
+                regionNum = "031";
+                break;
+            case "부산":
+                regionNum = "051";
+                break;
+            default:
+                alert("다시 입력하세요.");
+                location.reload();
+        }
+        if(region){
+            document.write(region+"의 지역번호는 "+regionNum+"입니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

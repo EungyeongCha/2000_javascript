@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>조건문실습</title>
+    <script>
+//        var age = Number(prompt("나이를 입력해주세요"));
+//        
+//        if(age>=40){
+//            alert("건강검진대상");
+//        }else{
+//            alert("건강검진대상아님");
+//        }
+        
+        
+//        if(20<=age && age<40){
+//            alert("서류심사통과");
+//        }else{
+//            alert("서류심사보류");
+//        }
+        var kor = Number(prompt("국어 점수를 입력해 주세요"),60);
+        var eng = Number(prompt("영어 점수를 입력해 주세요"),60);
+        var math = Number(prompt("수학 점수를 입력해 주세요"),60);
+        
+        var avg = (kor+eng+math)/3;
+        var result = 80<=avg && 60<=kor && 60<=eng && 60<=math;
+        if(result) {
+            alert("합격");
+        }else{
+            alert("재시험");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
